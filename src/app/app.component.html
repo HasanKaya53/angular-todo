@@ -1,0 +1,39 @@
+<h3 class="bg-primary text-white p-3">{{getName()}} Todo App</h3>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-5">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Add Todo" />
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">Add</button>
+        </div>
+      </div>
+
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Todo</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of getTodoList() ">
+            <td>{{item.description}}</td>
+            <td [ngSwitch]="item.action ">
+              <span *ngSwitchCase = "true">
+                yes
+              </span>
+              <span *ngSwitchCase = "false" >
+                no
+              </span>
+
+
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
