@@ -9,6 +9,7 @@ import { model, TodoItems } from './model';
 export class AppComponent {
   model = new model();
 
+  showAll = false;
 
 
   getName(){
@@ -17,7 +18,10 @@ export class AppComponent {
 
 
   getTodoList(){
-    return this.model.items.filter(item => !item.action);
+    if(!this.showAll){
+      return this.model.items.filter(item => !item.action);
+    }
+    return this.model.items;
   }
 
 
