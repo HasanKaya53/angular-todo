@@ -7,11 +7,11 @@ export class model
   constructor(){
     this.user = "Hasan";
     this.items = [
-      new TodoItem("Clean the house",true),
-      new TodoItem("Wash the dishes",false),
-      new TodoItem("Feed the cat",false),
-      new TodoItem("Buy groceries",false),
-      new TodoItem("Mow the lawn",false),
+      new TodoItems("Clean the house",true),
+      new TodoItems("Wash the dishes",false),
+      new TodoItems("Feed the cat",false),
+      new TodoItems("Buy groceries",false),
+      new TodoItems("Mow the lawn",false),
 
     ];
   }
@@ -23,7 +23,7 @@ export class model
 }
 
 
-export class TodoItem
+export class TodoItems
 {
   description;
   action;
